@@ -89,7 +89,7 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 
 **
 
-    	numero = 10
+	numero = 10
 	for i in range(0,numero+1):
 	  print numero-i
 
