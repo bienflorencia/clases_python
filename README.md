@@ -10,140 +10,159 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 
 **EXTRAER CARACTERES DE UN STRING**
 
-	  dna = 'AGCTAGCATCGATCGATCTAGCTAGCT'
-	  print dna[0:3]
-	  print dna[-3:]
-	  print dna[3:9]
-	  print dna[:-3]
+	dna = 'AGCTAGCATCGATCGATCTAGCTAGCT'
+	print dna[0:3]
+	print dna[-3:]
+	print dna[3:9]
+	print dna[:-3]
 
 
-**SALIDO DE DATOS EN PANTALLA**
+**SALIDA DE DATOS EN PANTALLA**
 
-	  print '\n'
-	  print 'In the town where I was born lived a man who sailed the sea'
-	  print 'And he told us of his life\nIn the land of submarines\n'
-	  frase_1 = '\tWe all live in '
-	  frase_2 = '\ta yellow submarine '
-	  print frase_1 + frase_2
-	  print frase_2 * 2
-	  print '\n'
+	print '\n'
+	print 'In the town where I was born lived a man who sailed the sea'
+	print 'And he told us of his life\nIn the land of submarines\n'
+	frase_1 = '\tWe all live in '
+	frase_2 = '\ta yellow submarine '
+	print frase_1 + frase_2
+	print frase_2 * 2
+	print '\n'
 
 **INGRESO DE DATOS POR EL USUARIO**
 
-	  print 'Ingrese los datos solicitados '
-	  nombre = raw_input('Cual es tu nombre: ')
-	  edad = input('Cual es su edad: ')
-	  color = raw_input('Y su comida preferida: ')
+	print 'Ingrese los datos solicitados '
+	nombre = raw_input('Cual es tu nombre: ')
+	edad = input('Cual es su edad: ')
+	color = raw_input('Y su comida preferida: ')
 
-	  print nombre, 'tiene\n', edad, 'anhos y \tco\tme ', color
+	print nombre, 'tiene\n', edad, 'anhos y \tco\tme ', color
+
 
 **SCRIPT PARA SABER SI UN NUMERO ES CERO, PAR O IMPAR**
 
-	  numero = input('Numero: ')
-	  if numero == 0:
-	    print 'El numero es cero'
-	  elif numero % 2 == 0:
-	    print 'El numero es par'
-	  else:
-	    print 'El numero es impar'
+	numero = input('Numero: ')
+	if numero == 0:
+	  print 'El numero es cero'
+	elif numero % 2 == 0:
+	  print 'El numero es par'
+	else:
+	  print 'El numero es impar'
 
 
 **SCRIPT PARA ADIVINAR UN NUMERO RANDOM**
 
-	  import random
-	  num = random.randint(1, 10)
+	import random
+	num = random.randint(1, 10)
 
-	  adivino = False
-	  while not adivino:
-	    num_guess = input('Adinvina, un numero del 1 al 10: ')
-	    if num_guess != num:
-	      print 'No adivinaste, intenta de nuevo'
-	    else:
-	      adivino = True
-	      print 'Adivinaste! el numero era: ', num
+	adivino = False
+	while not adivino:
+	  num_guess = input('Adinvina, un numero del 1 al 10: ')
+	  if num_guess != num:
+	    print 'No adivinaste, intenta de nuevo'
+	  else:
+	    adivino = True
+	    print 'Adivinaste! el numero era: ', num
     
-**DOS OPCIONES DE SUMAR LOS ELEMENTOS DE UNA LISTA**
+**OPCIONES DE SUMAR LOS ELEMENTOS DE UNA LISTA**
 
-	  total = 0
+**1**
+	total = 0
 
-	  for numero in range(1, 11):
-	    total = total + papa
-	    print total
+	for numero in range(1, 11):
+	  total = total + papa
+	  print total
 
-	  total = 0
+**2**
+	total = 0
+	
+	lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-	  lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	for numero in lista:
+	  total = total + papa
+	  print total
 
-	  for numero in lista:
-	    total = total + papa
-	    print total
+**OPCIONES PARA HACER UNA CUENTA REGRESIVA DESDE 10 a 0**
+	
+**1**
 
-**DOS OPCIONES PARA HACER UNA CUENTA REGRESIVA DESDE 10 a 0**
+	numero = 10
+	while numero>=0:
+	  print numero
+	  numero = numero -1
 
-	  numero = 10
+**2**
 
-	  while numero>=0:
-	    print numero
-	    numero = numero -1
-
-	  for i in range(0,numero+1):
-	    print numero-i
+    	numero = 10
+	for i in range(0,numero+1):
+	  print numero-i
 
 
 **ESCRIBIR UNA SENTENCIA EN UN ARCHIVO NUEVO**
 
-	  f = open('file.txt', 'w') 
-	  f.write('ACTGATAGCTAGACTATGCA')  
-	  f.close()
+	f = open('file.txt', 'w') 
+	f.write('ACTGATAGCTAGACTATGCA')  
+	f.close()
 
 
 **CALCULO DE CONTENIDO GC**
 
-	  lista_secuencias = ['ACGATAGCTAGC', 'TAGCTAGCTAGCTAGCTA', 'ATCGATCGATAGC', 'ATCGATCGATCGATG', 'TATCGATCGATTAG']
+	lista_secuencias = ['ACGATAGCTAGC', 'TAGCTAGCTAGCTAGCTA', 'ATCGATCGATAGC', 'ATCGATCGATCGATG', 'TATCGATCGATTAG']
 
-	  for sec in lista_secuencias:
-	      largo = len(sec)
-	      cant_c = sec.count('C')
-	      cant_G = sec.count('G')
-	      porcentaje_GC = (float(cant_c + cant_G)/largo) * 100	#cambio el tipo de dato a int a float
-	      print sec, porcentaje_GC, '%'
+	for sec in lista_secuencias:
+	    largo = len(sec)
+	    cant_c = sec.count('C')
+	    cant_G = sec.count('G')
+	    porcentaje_GC = (float(cant_c + cant_G)/largo) * 100	#cambio el tipo de dato a int a float
+	    print sec, porcentaje_GC, '%'
+
+**OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
+
+**1**
+
+	largo = 0
+	for letra in cadena:
+	  largo = largo + 1
+	print largo
+
+**2**
+	
+	largo = 0
+	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
+	largo = len(cadena)
+	print largo
 
 
-**DOS OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
+**OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
 
-	  largo = 0
-	  for letra in cadena:
-	    largo = largo + 1
-	  print largo
+**1**
 
-	  cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
-	  largo = len(cadena)
-	  print largo
+	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
+	cantidad_A = cadena.count('A')
+	print cantidad_A
 
+**2**
+	
+	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
+	cantidad_A = 0
+	for letra in cadena:
+	  if letra == 'A':
+	    cantidad_A = cantidad_A + 1
+	print cantidad_A
 
-**DOS OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
+**OPCIONES PARA CALCULAR LA RAIZ CUADRADA DE UN NUMERO**
 
-	  cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
+**1**
 
-	  cantidad_A = cadena.count('A')
-	  print cantidad_A
+	x= 2
+	raiz = x**0.5
+	print raiz
 
-	  cantidad_A = 0
-	  for letra in cadena:
-	    if letra == 'A':
-	      cantidad_A = cantidad_A + 1
-	  print cantidad_A
+**2**
 
-**DOS OPCIONES PARA CALCULAR LA RAIZ CUADRADA DE UN NUMERO**
-
-	  x= 2
-	  raiz = x**0.5
-	  print raiz
-
-	  import math
-	  x= 2
-	  raiz = math.sqrt(x)
-	  print raiz
+	import math
+	x= 2
+	raiz = math.sqrt(x)
+	print raiz
 
 
 
@@ -151,61 +170,61 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 
 **EJERCICIO 1 - POR PASOS**
 
-	  print 'Programa para calcular el contenido GC de una secuencia'
+	print 'Programa para calcular el contenido GC de una secuencia'
 
-	  lista_secuencias = ['ACGATAGCTAGC', 'TAGCGAGCTAGCTAGCTC', 'ATCGATCGATAGC', 'ATCGATCGATCGATG', 'TATCGATCGATTAG']
+	lista_secuencias = ['ACGATAGCTAGC', 'TAGCGAGCTAGCTAGCTC', 'ATCGATCGATAGC', 'ATCGATCGATCGATG', 'TATCGATCGATTAG']
 
-	  for secuencia in lista_secuencias:
+	for secuencia in lista_secuencias:
+	  print secuencia
+
+	for secuencia in lista_secuencias:
+	  if len(secuencia) >= 15:
 	    print secuencia
 
-	  for secuencia in lista_secuencias:
-	    if len(secuencia) >= 15:
-	      print secuencia
-
-	  for secuencia in lista_secuencias:
-	    if len(secuencia) >= 15:
-	      largo = len(secuencia)
-	      cant_C = secuencia.count('C')
-	      cant_G = secuencia.count('G')
-	      porcentaje_GC = (float(cant_C + cant_G) / largo) * 100
-	      if porcentaje_GC < 50:
-		print secuencia, porcentaje_GC, '%'
+	for secuencia in lista_secuencias:
+	  if len(secuencia) >= 15:
+	    largo = len(secuencia)
+	    cant_C = secuencia.count('C')
+	    cant_G = secuencia.count('G')
+	    porcentaje_GC = (float(cant_C + cant_G) / largo) * 100
+	    if porcentaje_GC < 50:
+	    	print secuencia, porcentaje_GC, '%'
 
 
 **EJERCICIO 2** 
 
 **Para un archivo**
 
-	  import sys
-	  archivo = sys.argv[1]	#Este archivo tengo que indicarlo por linea de comando
+	import sys
+	archivo = sys.argv[1]	#Este archivo tengo que indicarlo por linea de comando
 
-	  nuevo_archivo = open('lista_datos.txt','w') 
+	nuevo_archivo = open('lista_datos.txt','w') 
 
-	  for linea in open(archivo, 'r'):
-	    if linea.startswith('>'):
-	      ID = linea.split('|')[3]
-	      genero = linea.split('|')[4].split(' ')[1]
-	      especie = linea.split('|')[4].split(' ')[2]
-	      nuevo_archivo.write(ID + '\t' + genero + '\t' + especie + '\n')
-	  nuevo_archivo.close() 
+	for linea in open(archivo, 'r'):
+	  if linea.startswith('>'):
+	    ID = linea.split('|')[3]
+	    genero = linea.split('|')[4].split(' ')[1]
+	    especie = linea.split('|')[4].split(' ')[2]
+	    nuevo_archivo.write(ID + '\t' + genero + '\t' + especie + '\n')
+	nuevo_archivo.close() 
 
 **Para varios archivos**
 
-	  import sys
+	import sys
 
-	  file1 = sys.argv[1]
-	  file2 = sys.argv[2]
+	file1 = sys.argv[1]
+	file2 = sys.argv[2]
 
-	  files = [open(file1, 'r'), open(file2, 'r')]
+	files = [open(file1, 'r'), open(file2, 'r')]
 
-	  numerador = 1
+	numerador = 1
 
-	  for cada_file in files:
-	    archivo_nuevo = open(str(numerador) + '.txt', 'w') #str es porque tengo que pasar de tipo numerico a tipo string
-	    numerador = numerador + 1
-	    for linea in cada_file:
-	      if linea.startswith('>'):
-		ID = linea.split('|')[3]
+	for cada_file in files:
+	  archivo_nuevo = open(str(numerador) + '.txt', 'w') #str es porque tengo que pasar de tipo numerico a tipo string
+	  numerador = numerador + 1
+	  for linea in cada_file:
+	    if linea.startswith('>'):
+	    	ID = linea.split('|')[3]
 		todo_especie = linea.split('|')[4]
 		genero = todo_especie.split(' ')[1]
 		especie = todo_especie.split(' ')[2]
