@@ -70,7 +70,7 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 	for numero in range(1, 11):
 	  total = total + papa
 	  print total
-
+**
 
 	total = 0
 	
@@ -87,7 +87,7 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 	  print numero
 	  numero = numero -1
 
-
+**
 
     	numero = 10
 	for i in range(0,numero+1):
@@ -115,13 +115,12 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 **OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
 
 
-
 	largo = 0
 	for letra in cadena:
 	  largo = largo + 1
 	print largo
 
-
+**
 	
 	largo = 0
 	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
@@ -132,12 +131,11 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 **OPCIONES PARA CALCULAR EL LARGO DE UNA CADENA DE CARACTERES**
 
 
-
 	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
 	cantidad_A = cadena.count('A')
 	print cantidad_A
 
-
+**
 	
 	cadena = 'ACGCAGCATAGCTACTATCAGCTAATCGACCGCTAGCAG'
 	cantidad_A = 0
@@ -149,12 +147,11 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 **OPCIONES PARA CALCULAR LA RAIZ CUADRADA DE UN NUMERO**
 
 
-
 	x= 2
 	raiz = x**0.5
 	print raiz
 
-
+**
 
 	import math
 	x= 2
