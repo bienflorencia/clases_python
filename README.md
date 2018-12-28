@@ -68,7 +68,7 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 	total = 0
 
 	for numero in range(1, 11):
-	  total = total + papa
+	  total = total + numero
 	  print total
 **
 
@@ -77,7 +77,7 @@ Introducción a la línea de comando y a la programación para análisis bioinfo
 	lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 	for numero in lista:
-	  total = total + papa
+	  total = total + numero
 	  print total
 
 **OPCIONES PARA HACER UNA CUENTA REGRESIVA DESDE 10 a 0**
